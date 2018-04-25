@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_action :set_user, except: [:index, :new, :create, :friend_requests]
-  before_action :authenticate_user, except: [:index, :show, :new, :create]
 
   def index
     @users = User.all
@@ -22,7 +21,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      session[:user_id] = @user.id
       redirect_to @user
     else
       render :new
@@ -39,7 +37,6 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy if @user == current_user
-    reset_session
     redirect_to users_path
   end
 
@@ -68,6 +65,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password)
+    params.require(:user).permit(:first_name, :last_name, :email, :password_hash)
   end
 end

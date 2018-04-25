@@ -1,6 +1,5 @@
 class StatusesController < ApplicationController
   before_action :set_status, only: [:edit, :update, :destroy]
-  before_action :authenticate_user
 
   def new
     @status = Status.new
