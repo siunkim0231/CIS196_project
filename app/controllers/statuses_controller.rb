@@ -40,6 +40,6 @@ class StatusesController < ApplicationController
   end
 
   def status_params
-    params.require(:status).permit(:text)
+    params.require(:status).permit(:text, :image)
   end
 end
