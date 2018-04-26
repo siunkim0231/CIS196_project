@@ -13,7 +13,7 @@
         <%# Only display the current user's name, friend requests and log out links if a user is logged in %>
         <% if logged_in? %>
           <li class="nav-item"><%= link_to current_user.full_name, current_user, class: 'nav-link' %></li>
-          <li class="nav-item"><%= link_to 'Follow Requests', '/friend_requests', class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to 'Friend Requests', '/friend_requests', class: 'nav-link' %></li>
           <li class="nav-item"><%= link_to 'Log out', '/logout', method: :delete, class: 'nav-link' %></li>
 
         <%# Only display the sign up and log in links if no user is logged in %>
