@@ -12,7 +12,7 @@ group :development do
   gem 'sqlite3', '1.3.11'
 end
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.18'
 end
 gem 'turbolinks', '5.0.1'
 gem 'uglifier', '4.1.2'
