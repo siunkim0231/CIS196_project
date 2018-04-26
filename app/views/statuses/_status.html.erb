@@ -6,7 +6,7 @@
     <br>
     <small class="card-subtitle text-muted">Updated <%= time_ago_in_words(status.updated_at) %> ago</small>
     <p class="card-text"><%= status.text %></p>
-    <%= image_tag status.image.url(:thumb) %>
+    <%= image_tag status.image.url(:thumb) %><br>
     <% if current_user == status.user %>
       <%= link_to 'Edit', edit_status_path(status), class: 'card-link' %>
       <%= link_to 'Delete', status, method: :delete, data: { confirm: 'Are you sure?' }, class: 'card-link' %>
