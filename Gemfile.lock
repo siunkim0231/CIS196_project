@@ -117,6 +117,7 @@ GEM
     parallel (1.12.1)
     parser (2.5.0.4)
       ast (~> 2.4.0)
+    pg (1.0.0)
     popper_js (1.12.9)
     powerpack (0.1.1)
     pry (0.11.3)
@@ -243,6 +244,7 @@ DEPENDENCIES
   jquery-rails (= 4.3.1)
   listen (= 3.1.5)
   paperclip (~> 4.2)
+  pg
   pry (= 0.11.3)
   puma (= 3.11.0)
   rack_session_access (= 0.1.1)
@@ -256,6 +258,9 @@ DEPENDENCIES
   turbolinks (= 5.0.1)
   uglifier (= 4.1.2)
   web-console (= 3.5.1)
+
+RUBY VERSION
+   ruby 2.4.1p111
 
 BUNDLED WITH
    1.16.1
