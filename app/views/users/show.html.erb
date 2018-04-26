@@ -56,7 +56,6 @@
     <% else %>
       <% @user.statuses.each do |status| %>
         <%= render 'statuses/status', status: status %>
-        <%= image_tag status.image.url(:thumb) %>
         <br>
       <% end %>
     <% end %>
